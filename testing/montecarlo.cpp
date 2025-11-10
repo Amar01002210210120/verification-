@@ -13,7 +13,7 @@ int main() {
     // Random number setup
     std::random_device rd;           // seed source
     std::mt19937 rng(rd());          // Mersenne Twister engine, pseudorandom engine look deeper into mersenne twister 
-    std::bernoulli_distribution coin_flip(0.5); // 50/50 up or down
+    std::bernoulli_distribution coin_flip(0.55); // Gave the stock a little updrift, now we see slight uptick instead of base 50/50, it is stocks after all 
 
     int count_above_initial = 0;
 
