@@ -12,7 +12,7 @@ int main() {
 
     // Random number setup
     std::random_device rd;           // seed source
-    std::mt19937 rng(rd());          // Mersenne Twister engine
+    std::mt19937 rng(rd());          // Mersenne Twister engine PRNG
     std::bernoulli_distribution coin_flip(0.55); // Gave the stock a little updrift, now we see slight uptick instead of base 50/50, it is stocks after all 
 
     int count_above_initial = 0;
@@ -46,4 +46,4 @@ int main() {
     return 0;
 }
 
-// Simple introduction for monte carlo. Possibly look into implementing markov chains into project
+// Simple introduction for monte carlo, completely unrelated to project. Possibly look into implementing markov chains into project
