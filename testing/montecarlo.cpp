@@ -1,6 +1,6 @@
 #include <iostream>
-#include <random>    // for random number generation
-#include <vector>    // for std::vector
+#include <random>    // RNG
+#include <vector>    // for std::vector, simple
 
 int main() {
     // Parameters
@@ -12,7 +12,7 @@ int main() {
 
     // Random number setup
     std::random_device rd;           // seed source
-    std::mt19937 rng(rd());          // Mersenne Twister engine
+    std::mt19937 rng(rd());          // Mersenne Twister engine, pseudorandom engine look deeper into mersenne twister 
     std::bernoulli_distribution coin_flip(0.5); // 50/50 up or down
 
     int count_above_initial = 0;
@@ -21,7 +21,7 @@ int main() {
         double price = initial_price;
 
         for (int d = 0; d < days; ++d) {
-            bool up = coin_flip(rng); // true or false
+            bool up = coin_flip(rng); // true or false 
 
             if (up) {
                 price *= (1.0 + up_return);
@@ -46,3 +46,4 @@ int main() {
     return 0;
 }
 
+// Simple introduction for monte carlo. Possibly look into implementing markov chains into project
