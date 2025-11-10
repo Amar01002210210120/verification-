@@ -4,7 +4,7 @@
 
 int main() {
     // Parameters
-    const double initial_price = 100.0;
+    const double initial_price = 100.0; // const so the values don't change, double for 64 bit double-percision (VERY IMPORTANT IN FINANCE unlike long double or float)
     const double up_return = 0.01;    // +1%
     const double down_return = -0.01; // -1%
     const int days = 10;              // length of each path
@@ -12,7 +12,7 @@ int main() {
 
     // Random number setup
     std::random_device rd;           // seed source
-    std::mt19937 rng(rd());          // Mersenne Twister engine, pseudorandom engine look deeper into mersenne twister 
+    std::mt19937 rng(rd());          // Mersenne Twister engine
     std::bernoulli_distribution coin_flip(0.55); // Gave the stock a little updrift, now we see slight uptick instead of base 50/50, it is stocks after all 
 
     int count_above_initial = 0;
