@@ -26,4 +26,5 @@ def plot_transform(A, title="Matrix Transform"):
 if __name__ == "__main__":
         A = np.array([[3,0],
                       [0,2]])
-        plot_transform(A, title="M1 Stretch")
+
+        plot_transform(A, title="M1 Stretch") # Python script meant to show matrix transformation just a little beta test for whats coming soon
